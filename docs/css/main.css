@@ -172,6 +172,54 @@ input.custom-control-input:disabled ~ label {
   color: #ced4da;
 }
 
+.full-w,
+.full-h {
+  position: relative;
+  overflow: hidden;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.full-w img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.full-h {
+  height: 100%;
+}
+
+.full-h img {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+
+.right-side .full-w,
+.right-side .full-h,
+.left-side .full-w,
+.left-side .full-h {
+  height: 500px;
+}
+
+.right-side .full-w img,
+.right-side .full-h img,
+.left-side .full-w img,
+.left-side .full-h img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.right-side .full-w img,
+.right-side .full-h img {
+  left: auto;
+  right: 0;
+}
+
 .logo svg {
   width: auto;
   height: 40px;
@@ -450,7 +498,7 @@ a.target-burger ul.buns li.bun:last-child {
 }
 
 section {
-  padding: 50px 0;
+  padding: 90px 0;
 }
 
 .header + section,
@@ -635,6 +683,10 @@ section.breadcrumb-nav {
 
 .contacts .map {
   height: 50vh;
+}
+
+.contacts .svg-map path {
+  fill: #fff;
 }
 
 .tags {
