@@ -19,9 +19,10 @@ var chartInit = function chartInit() {
   var pointW = (riseChart.offsetWidth - 160) / risePoints.length;
   risePoints.forEach(function (point, inx) {
     point.style.width = pointW + 'px';
-    point.style.left = 80 + (inx ? pointW * inx : 0) + 'px';
-    point.style.top = (inx ? 100 - pointData[inx] * riseChart.offsetHeight / 100 : 100) + '%';
-    point.querySelector('.btn').textContent = pointData[inx] + '%';
+    point.style.left = 80 + (inx ? pointW * inx : 0) + 'px'; // eslint-disable-next-line no-mixed-operators
+
+    point.style.top = "".concat(inx ? 100 - pointData[inx] * riseChart.offsetHeight / 100 : 100, "%");
+    point.querySelector('.btn').textContent = "".concat(pointData[inx], "%");
   });
 }; // window events ----
 
@@ -37,5 +38,5 @@ window.onload = function () {
 };
 
 window.onresize = function () {
-  if (!!chart) chartInit();
+  if (chart) chartInit();
 };
