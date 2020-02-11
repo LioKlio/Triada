@@ -1,0 +1,40 @@
+mixin carousel_title_nav(slides)
+  each slide, inx in slides
+    li(class="col" data-index=`${inx+1}`)= slide.title
+
+
+mixin carousel_slide(slides)
+  each slide, inx in slides
+    div(class=`swiper-slide slide-${inx}` style=`background-image: url('./img/${slide.img}')` data-title= slide.title)
+      .container
+        if slide.price
+          .row
+            .col.room__price(data-aos="zoom-in" data-aos-delay="1200" data-aos-duration="800")
+              .price= `$ ${slide.price}`
+              .price_sub Per Night
+            .col.room__title
+              .title(data-aos="fade-left" data-aos-delay="200")= slide.title
+              .title_sub(data-aos="fade-left" data-aos-delay="300")= slide.title_sub
+            .col.room__description
+              .description__block(data-aos="fade-right" data-aos-delay="400")
+                p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.
+                .row.btn-set
+                  button.btn.btn-tiny Read More
+                  button.btn.rose.btn__booking.ng-ripple-out
+                    span Book Now
+                    span Close
+        else
+          .swiper__title
+            .title=  slide.text
+            a.btn(class= slide.btn_color  href= slide.btn_link)= slide.btn_text
+
+
+mixin carousel(pagination,buttons,slides)
+  .swiper-container
+    .swiper-wrapper
+      +carousel_slide(slides)
+    if pagination
+       .swiper-pagination: .container
+    if buttons
+      .swiper-button.swiper-button-prev.ng-backward
+      .swiper-button.swiper-button-next.ng-forward

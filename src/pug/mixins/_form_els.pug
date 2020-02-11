@@ -1,0 +1,73 @@
+
+mixin form_inp(name,dark)
+  .form-group
+    input.form-control.labled-control(class= `${dark ? 'inp-dark' : ''}` type="text" id="inp2")
+    label(for="inp2") Ваши данные
+
+mixin form_check(name,dark,large)
+  .form-group
+    input(class= `${dark ? 'inp-dark' : ''} ${large ? 'inp-large' : ''}`
+          type="checkbox" name= `${name + dark}` id= `${name + dark}`
+          value= `${name + Math.floor(Math.random() * (15 - 1300) + 1300)}`)
+    label(for= `${name + dark}`) Выберите ваш вариант
+
+mixin form_radio(name,dark,large)
+  - const rand = Math.floor(Math.random() * (15 - 1300) + 1300)
+  .form-group
+    input(class= `${dark ? 'inp-dark' : ''} ${large ? 'inp-large' : ''}`
+          type="radio" name= `${name + dark + large}` id= `${name + dark + rand}`
+          value= `${name + rand}`)
+    label(for= `${name + dark + rand}`) Выберите ваш вариант
+
+mixin form_select(dark)
+  .form-group
+    select.custom_select(class= `${dark ? 'sel-dark' : ''}`)
+      option(value="a") Выбирай
+      - for (var x = 0; x < 5; x++)
+        option(value= `${x}`)= `Item ${x}`
+
+
+
+mixin forms_el(dark)
+  .row.p-1
+    .col
+      +form_inp(name,dark)
+      +form_inp(name,dark)
+      +form_inp(name,dark)
+    .col
+      +form_inp(name,dark)
+      +form_inp(name,dark)
+      +form_inp(name,dark)
+    .col
+      +form_check('ch1',dark,0,1)
+      +form_check('ch2',dark,0,0)
+
+      +form_check('ch3',dark,1,1)
+      +form_check('ch4',dark,1,0)
+
+  .row.p-1
+    .col
+      .form-group
+        textarea.form-control(class= `${dark ? 'inp-dark' : ''}`
+                  onblur="this.value!=''?this.classList.add('fill'):this.classList.remove('fill');"
+                  name="comments", cols="30", rows="10")
+        label(for="comments") Ваш комментарий
+    .col
+      +form_select(dark)
+
+
+
+    .col
+      +form_radio('radioinp',dark,0,1)
+      +form_radio('radioinp',dark,0,0)
+
+      +form_radio('radioinp',dark,1,1)
+      +form_radio('radioinp',dark,1,0)
+
+
+
+  .row.p-2
+    .col
+      button.btn.btn-large(class= `${dark ? 'btn-dark' : ''}`) Принять участие
+      button.btn(class= `${dark ? 'btn-dark' : ''}`) выбрать
+

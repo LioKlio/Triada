@@ -1,0 +1,11 @@
+#/src
+#/gulp
+/.vscode
+#/.babelrc.js
+#/.eslintrc.json
+#/.gitignore
+#/gulpfile.babel.js
+/package-lock.json
+#/packag-e.json
+/node_modules
+#/package.json

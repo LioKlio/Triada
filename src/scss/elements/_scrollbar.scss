@@ -1,0 +1,18 @@
+body.main::-webkit-scrollbar,
+nav .nav__grid-container::-webkit-scrollbar {
+  width: 11px;
+}
+body.main, nav .nav__grid-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body.main::-webkit-scrollbar-track,
+nav .nav__grid-container::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body.main::-webkit-scrollbar-thumb,
+nav .nav__grid-container::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}

@@ -1,0 +1,32 @@
+- const menu1 = ['Reservations','Specials','Location','Contact','Events'];
+- const menu3 = ['Book Direct','Best Rate Guarantee','Press','FAQs','Careers','Privacy Policy','Site Map'];
+-
+  const menu2 = [
+    'Home',
+    'Our Hotel',
+    {
+      name: 'Stay',
+      nav: ['Wine Market','Lorem Ipsum','Dolor sit'],
+    },
+    {
+      name: 'Dining',
+      nav: ['Wine Market','Lorem Ipsum','Dolor sit'],
+    },
+    'Meet',
+    'Celebrate',
+    'Experience',
+    'Gallery'
+  ];
+
+nav.navigation
+  .nav__button
+    .menu-trigger menu
+      span
+
+  .nav__grid-container
+    ul.col.nav__main
+      +multilevel_menu2(menu2)
+    ul.nav__alt.col.nav__alt1
+      +onelevel_menu(menu1)
+    ul.nav__alt.col.nav__alt2
+      +onelevel_menu(menu3)

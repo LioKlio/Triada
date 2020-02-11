@@ -1,0 +1,15 @@
+.breadcrumb {
+  margin: 0;
+  padding: 10px 0 0;
+  background-color: transparent;
+  border-radius: 0;
+
+  &-item {
+    display: flex; align-items: center;
+    font-size: 12px; line-height: 20px;
+    a {color: $text-color !important;}
+    i.fa, i.fa::before {color: $red; font-size: 16px; margin-right: 4px;}
+    &:last-child {color: $red;}
+    &::before {position: relative; top: 3px; opacity: 0.6; }
+  }
+}

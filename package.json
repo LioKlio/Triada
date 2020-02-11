@@ -1,0 +1,63 @@
+{
+  "name": "nextguest",
+  "description": "project - gulp, pug, sass",
+  "version": "1.0.0",
+  "author": {
+    "name": "LioKlio",
+    "email": "lioklio@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "pug",
+    "scss",
+    "babel"
+  ],
+  "repository": "github:lioklio",
+  "private": true,
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "zip": "gulp zip"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "babel-eslint": "^10.0.3",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp-zip": "^5.0.1",
+    "require-dir": "^1.2.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha2",
+    "flatpickr": "^4.6.3",
+    "hover.css": "^2.3.2",
+    "jade-bootstrap": "^1.0.14",
+    "swiper": "^5.2.1"
+  }
+}

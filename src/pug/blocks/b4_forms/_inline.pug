@@ -1,0 +1,15 @@
+mixin form_inline(size,isLabel)
+  - const sizze = size ? `-${size}` : ''
+  form.form-row.justify-content-center
+    .form-group.col-md-4
+      if isLabel
+        label(for='name') Как к Вам обращаться?:
+      input#name.form-control(class=`form-control${sizze}` type='name' placeholder='Как к Вам обращаться?' name='name')
+
+    .form-group.col-md-4
+      if isLabel
+        label(for='phone') Ваш номер телефона:
+      input#phone.form-control(class=`form-control${sizze}` type='text' placeholder='Ваш номер телефона' name='phone')
+
+    .form-group.col-md-auto
+      +btn('Получить консультцию','primary', size)

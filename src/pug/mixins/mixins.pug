@@ -1,0 +1,15 @@
+//- BOOTSTRAP 4 https://github.com/rajasegar/PUG-Bootstrap
+include ../../../node_modules/jade-bootstrap/components/forms.pug
+include ../../../node_modules/jade-bootstrap/components/buttons.pug
+include ../../../node_modules/jade-bootstrap/components/labels.pug
+
+
+include _form_els.pug
+include _navigation.pug
+include _carousel.pug
+
+include ../blocks/b4_forms/_inline.pug
+
+mixin title_separator(text)
+  h2.mb-0.display-4.text-right.text-muted= text
+

@@ -1,0 +1,90 @@
+//  FONTS
+$roboto:    'Roboto', sans-serif;
+$robotoS:   'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+$arapey:    'Arapey', serif;
+$oswald:    'Oswald', sans-serif;
+
+
+$red:        #f00d22;
+$blue:       #559adc;
+$dark:       #232323;
+$light:      #f8f9fa;
+$bg-color:   #fdfdfd;
+
+$primary:             $red;
+$info:                $blue;
+$brand-primary:       $red;
+
+
+$font-family-base: $open-sans;
+
+$def-font:      $font-family-base;
+$text-font:     $font-family-base;
+$title-font:    $oswald;
+
+$def-font-color:      $dark;
+$text-color:          $dark;
+$title-color:         $dark;
+
+$text-muted: #ced4da;
+
+
+$font-weight-lighter:         100;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
+
+
+$border-color: #d8d8d8;
+$border-radius: 4px;
+$border-radius-lg: 4px;
+
+$input-border-color: $border-color;
+
+$btn-padding-x:                 2rem;
+$input-padding-x:               1rem;
+$input-btn-padding-y:           1rem;
+$input-btn-font-size:        0.9375rem;
+
+$btn-padding-y-sm:              .6rem;
+$btn-padding-x-sm:              .9rem;
+$btn-font-size-sm:              0.875rem;
+
+$btn-padding-x-lg:              3.5rem;
+$input-padding-x-lg:            1rem;
+$input-btn-padding-y-lg:        1.25rem;
+$input-btn-font-size-lg:        0.9375rem;
+
+$input-btn-focus-width:         0;
+$input-btn-focus-color:         $border-color;
+$input-box-shadow:              none;
+$input-focus-box-shadow:        none;
+
+
+$anim: cubic-bezier(.175,.885,.32,1.275);
+
+
+// $btn-primary-color:   $white;
+$btn-primary-bg:      $brand-primary;
+$btn-primary-border:  $border-color;
+$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmkgYmktY2hldnJvbi1yaWdodCIgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi42NDYgMy42NDZhLjUuNSAwIDAxLjcwOCAwbDYgNmEuNS41IDAgMDEwIC43MDhsLTYgNmEuNS41IDAgMDEtLjcwOC0uNzA4TDEyLjI5MyAxMCA2LjY0NiA0LjM1NGEuNS41IDAgMDEwLS43MDh6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1600px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1540px
+) !default;
+
+$enable-shadows: true;
+$enable-responsive-font-sizes: true;

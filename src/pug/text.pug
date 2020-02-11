@@ -1,0 +1,208 @@
+extends layout/main.pug
+
+block vars
+  - const title = 'Текстовка';
+  - const pagetype = 'inner';
+
+block content
+
+  section.breadcrumb-nav: .container: .row: .col
+    include elements/_el_breadcrumb.pug
+
+  section.main: .container
+
+    .row
+      .col
+        .h1 1 какой-то заголовок
+        .lead Современный портал для торговли недвижимостью
+
+        +title_separator('Headers')
+        h1 Lorem ipsum Заголовок 1
+        h2 Lorem ipsum Заголовок 2
+        h3 Lorem ipsum Заголовок 3
+        h4 Lorem ipsum Заголовок 4
+        h5 Lorem ipsum Заголовок 5
+        h6 Lorem ipsum Заголовок 6
+
+    .row
+      .col
+        +title_separator('Paragraph')
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sequi modi dignissimos sunt natus? Voluptatibus alias incidunt reprehenderit, veritatis sunt dicta doloremque eveniet ab. Alias explicabo eum, asperiores laboriosam dolorem veniam! Beatae commodi cupiditate quia maiores sequi! Iure, nostrum reiciendis!
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique aperiam eius laborum voluptates perferendis molestiae molestias recusandae voluptate. Eos delectus eaque eius quos perferendis ducimus nisi suscipit aliquid praesentium ullam, aspernatur nesciunt repellendus sit. Voluptatem non modi at similique neque.
+
+    .row.my-3
+      .col
+        img.img-fluid(src='img/top.jpg' alt='Responsive image')
+
+    .row
+      .col
+        +title_separator('Blockquote')
+        .row.justify-content-center
+          .col.mx-0.col-md-11.col-lg-9
+            blockquote.blockquote
+              p.mb-0 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab ut autem nobis aspernatur id, numquam consequatur sapiente exercitationem aliquam excepturi explicabo eligendi nihil libero accusamus beatae adipisci reiciendis dolorem praesentium dignissimos in tempore error aliquid aut. Neque maxime eos id!"
+              footer.blockquote-footer
+                | Someone famous in
+                cite(title='Source Title') Source Title
+    .row
+      .col
+        +title_separator('Lists')
+    .row
+      .col-12.col-md-6
+        ul
+          - for (var x = 0; x < 6; x++)
+            li= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eos velit sit dolore beatae ipsam assumenda nam.'
+
+      .col-12.col-md-6
+        ol
+          - for (var x = 0; x < 6; x++)
+            li= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eos velit sit dolore beatae ipsam assumenda nam.'
+
+  section.jumbotron-tmpl.bg-light: .container
+    .row
+      .col.text-center
+        .h1 Вы получаете в 15 раз больше заявок!
+        .lead: strong На этом работа не заканчивается!
+
+        .pt-5
+          .lead.text-center Автоматический сбор контактов. <strong>+500%</strong> лидов. Более холодных, но контактов потенциальных клиентов.
+          .lead.text-center Внедряем сквозную BI-аналитику. Отключаем до <strong>80%</strong> неэффективного бюджета.
+
+  section.forms-tmpl: .container
+    .row
+      .col
+        +title_separator('Forms')
+
+    .row.mb-5
+      .col
+        h2 Inline form
+        .h5 Normal forms
+        +form_inline('',0)
+        .h5 Full forms
+        +form_inline('lg',0)
+
+    .row.mb-5
+      .col
+        h2 Full form
+        form
+          .form-row
+            .form-group.col-md-6
+              //- label(for='inputEmail4') Email
+              input#inputEmail4.form-control(type='email' placeholder='Email')
+            .form-group.col-md-6
+              //- label(for='inputPassword4') Password
+              input#inputPassword4.form-control(type='password' placeholder='Password')
+          .form-group
+            //- label(for='inputAddress') Address
+            input#inputAddress.form-control(type='text' placeholder='1234 Main St')
+          .form-group
+            //- label(for='inputAddress2') Address 2
+            input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
+
+          .form-row
+            .form-group.col-md-6
+              //- label(for='inputCity') City
+              input#inputCity.form-control(type='text' placeholder='City')
+            .form-group.col-md-4
+              //- label(for='inputState') State
+              select#inputState.form-control
+                option(selected='') Choose state...
+                option ...
+            .form-group.col-md-2
+              //- label(for='inputZip') Zip
+              input#inputZip.form-control(type='text' placeholder='Zip')
+
+          .form-row
+            .form-group.col-md-6
+              //- label(for='exampleFormControlTextarea1') Example textarea
+              textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Введите ваш текст')
+
+            fieldset.form-group.col-md-3
+              .form-check
+                input#gridRadios1.custom-control-input(type='radio' name='gridRadios' value='option1' checked='')
+                label.form-check-label(for='gridRadios1')
+                  | First radio
+              .form-check
+                input#gridRadios2.custom-control-input(type='radio' name='gridRadios' value='option2')
+                label.form-check-label(for='gridRadios2')
+                  | Second radio
+              .form-check.disabled
+                input#gridRadios3.custom-control-input(type='radio' name='gridRadios' value='option3' disabled='')
+                label.form-check-label(for='gridRadios3')
+                  | Third disabled radio
+
+            fieldset.form-group.col-md-3
+              .form-check
+                input#gridCheck1.custom-control-input(type='checkbox' name='checkbox1')
+                label.form-check-label(for='gridCheck1')
+                  | Checkbox 1
+              .form-check
+                input#gridCheck2.custom-control-input(type='checkbox' name='checkbox2' checked='')
+                label.form-check-label(for='gridCheck2')
+                  | Checkbox 2
+              .form-check
+                input#gridCheck3.custom-control-input(type='checkbox' name='checkbox3' disabled='')
+                label.form-check-label(for='gridCheck3')
+                  | Checkbox 3
+
+
+
+          .form-group
+            .form-check
+              input#gridCheck.custom-control-input(type='checkbox')
+              label.form-check-label(for='gridCheck')
+                | Check me out
+
+          .btn-set.text-right
+            button.btn.btn-lg.btn-primary(type='submit') Получить консультцию
+
+  section.buttons-tmpl: .container
+    .row
+      .col
+        +title_separator('Buttons')
+
+    .row.mb-5
+      .col
+        h2 Buttons
+
+        button.btn.btn-primary(type='button') Primary
+        button.btn.btn-secondary(type='button') Secondary
+        button.btn.btn-success(type='button') Success
+        button.btn.btn-danger(type='button') Danger
+        button.btn.btn-warning(type='button') Warning
+        button.btn.btn-info(type='button') Info
+        button.btn.btn-light(type='button') Light
+        button.btn.btn-dark(type='button') Dark
+        button.btn.btn-link(type='button') Link
+
+        hr
+        button.btn.btn-outline-primary(type='button') Primary
+        button.btn.btn-outline-secondary(type='button') Secondary
+        button.btn.btn-outline-success(type='button') Success
+        button.btn.btn-outline-danger(type='button') Danger
+        button.btn.btn-outline-warning(type='button') Warning
+        button.btn.btn-outline-info(type='button') Info
+        button.btn.btn-outline-light(type='button') Light
+        button.btn.btn-outline-dark(type='button') Dark
+
+        hr
+        button.btn.btn-primary.btn-lg(type='button') Large button
+        button.btn.btn-secondary.btn-lg(type='button') Large button
+
+        hr
+        h2 Button tags
+        a.btn.btn-primary(href='#' role='button') Link
+        button.btn.btn-primary(type='submit') Button
+        input.btn.btn-primary(type='button' value='Input')
+        input.btn.btn-primary(type='submit' value='Submit')
+        input.btn.btn-primary(type='reset' value='Reset')
+        hr
+
+  section.tables-tmpl: .container
+    .row
+      .col
+        +title_separator('Tables')
+
+    .row.my-5
+      .col
+        include elements/_b4_def_table.pug

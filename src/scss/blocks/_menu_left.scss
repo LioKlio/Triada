@@ -1,0 +1,152 @@
+$padd: 40px;
+
+nav {
+  position: fixed; top: 0; left: 0;
+
+  padding: 40px 10vw 40px 40px+$padd;
+  height: 100vh;
+  background-color: $dark-grey;
+  transform: translateX(-100%);
+  transition: transform 1s $anim;
+
+  z-index: 250;
+
+  .nav__button {
+    position: absolute; top: 45px;
+    left: calc(100% + 40px);
+    transition: transform 1s $anim;
+    transform: translateX(0); z-index: 10000;
+    .menu-trigger {
+      padding-left: 60px;
+      width: 100px; height: 30px; line-height: 30px;
+      position: relative;
+      color: #fff; text-transform: uppercase;
+      transition: background 0.3s, color 0.5s;
+
+      cursor: pointer; overflow: hidden;
+      &:focus { outline: none; }
+
+      span {
+        display: block;
+        width: 40px; height: 1px; border-top: 1px solid transparent;
+        position: absolute;
+        top: 14px; left: 0;
+        background: #fff;
+        transition: background 0s 0.3s;
+
+        &::before, &::after {
+          content: " ";
+          display: block;
+          width: 100%; height: 1px; border-top: 1px solid transparent;
+          position: absolute; left: 0;
+          background-color: #fff;
+          transition-duration: 0.3s, 0.3s;
+          transition-delay: 0.3s, 0s;
+          z-index: 100;
+        }
+        &::before { top: -14px; transition-property: top, \transform; }
+        &::after { bottom: -14px; transition-property: bottom, \transform; }
+      }
+    }
+  }
+  &.is-active {
+    transform: translateX(-$padd);
+    .nav__button { transform: translateX(calc(-100% - 50px)); }
+    .menu-trigger {
+      width: 40px;
+      color: transparent;
+      span {
+        background: none;
+
+        &::before, &::after {
+          background-color: $yellow;
+          transition-delay: 0s, 0.3s;
+        }
+
+        &::before {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @import 'menu_left_flex';
+  @import 'menu_left_grid';
+}
+
+
+
+
+@media (max-height: 800px) and (orientation: landscape) {
+  nav {
+    .nav__grid-container {
+      height: 100%;
+      margin: 0;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "nav-main nav-alt1" "nav-main nav-alt2";
+      grid-column-gap: 40px;
+    }
+    ul.col.nav__main {
+      order: 0; margin-top: 0; margin-bottom: 20px;
+      a.current + .nav__main-sub { padding-top: 10px; padding-bottom: 10px; }
+    }
+  }
+}
+
+@media (max-height: 450px) and (orientation: landscape) {
+  nav .nav__grid-container {
+    height: 100%;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav-main nav-alt1 nav-alt2";
+    grid-column-gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    .nav__button {
+      top: 20px; left: calc(100% + 10px);
+      .menu-trigger {
+        width: 30px;
+        span {
+          top: 10px;
+          &::before { top: -10px; transition-property: top, \transform; }
+          &::after { bottom: -11px; transition-property: bottom, \transform; }
+        }
+      }
+    }
+    &.is-active {
+      .nav__button span {top: 14px}
+      .nav__button span::before { top: 0; transition-property: top, \transform; }
+      .nav__button span::after { bottom: 0; transition-property: bottom, \transform; }
+    }
+    .nav__grid-container {
+      height: 100%;
+      margin: 0;
+      overflow: auto;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "nav-main" "nav-alt1" "nav-alt2";
+      grid-row-gap: 20px;
+    }
+
+  }
+}
+

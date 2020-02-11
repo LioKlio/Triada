@@ -1,0 +1,18 @@
+header.header: .container
+  .navbar
+    include ../elements/_el_logo.pug
+
+    nav.navbar-collapse.burger-el
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href="text.html") Текстовка
+        li.nav-item
+          a.nav-link(href="case.html") Портфолио
+        +onelevel_menu_b4(['Продвижение', 'Поддержка', 'Услуги', 'Контакты'])
+
+    .call
+      .phone +7 <span>(495)</span> 240-82-92
+      button.btn.btn-sm.btn-outline-dark.btn-header Заказать звонок
+
+    include ../elements/_hamburger.pug
+

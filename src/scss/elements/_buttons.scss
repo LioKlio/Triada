@@ -1,0 +1,78 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px; line-height: 40px;
+  min-width: 120px;
+  font-size: 14px;
+  text-align: center;
+  font-family: $robotoS;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+  }
+  &:hover {
+    text-decoration: none;
+    // &:not([disabled="disabled"]) {
+
+    // }
+  }
+
+  &.btn-tiny {
+    color: #fff;
+    border: 1px solid #fff;
+    @include shutter-out-horizontal();
+    background-color: transparent;
+  }
+  &.btn-large {
+    padding: 10px 30px;
+    min-width: 180px;
+    height: 50px; line-height: 50px;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    &:first-child {display: block; opacity: 1; transition: opacity 1s;}
+    &:last-child {display: none; opacity: 0; transition: opacity 1s;}
+  }
+  &.show span {
+    &:first-child {display: none; opacity: 0;}
+    &:last-child {display: block; opacity: 1;}
+  }
+
+  &.rose {
+    color: #fff;
+  }
+  &.yellow {
+    color: $dark-grey;
+  }
+  &.dark-grey {
+    color: $yellow;
+  }
+}
+
+
+
+@media (max-width: 760px) {
+  .btn {
+    padding: 8px 12px; height: auto; line-height: normal;
+    min-width: 90px; font-size: 14px; line-height: unset;
+    &.btn-large {
+      padding: 8px 12px;
+      min-width: 110px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}

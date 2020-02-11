@@ -1,0 +1,33 @@
+mixin onelevel_menu(listim)
+  each navitem in listim
+    li: a(href='/')= navitem
+
+
+mixin multilevel_menu(listim)
+  each navitem in listim
+    if typeof navitem === 'string'
+      li: a(href='/')= navitem
+    else
+      li
+        a(class='hasChild')= navitem.name
+        ul.nav__main-sub
+          +multilevel_menu(navitem.nav)
+
+
+//- bootstrap 4
+mixin onelevel_menu_b4(listim)
+  each navitem in listim
+    li.nav-item: a.nav-link(href='/')= navitem
+
+mixin multilevel_menu_b4(listim)
+  each navitem in listim
+    if typeof navitem === 'string'
+      li.nav-item: a.nav-link(href='/')= navitem
+    else
+      li.nav-item
+        a.nav-link.nav-link-toggle= navitem.name
+        ul.navbar-nav-subnav
+          +multilevel_menu_b4(navitem.nav)
+
+
+

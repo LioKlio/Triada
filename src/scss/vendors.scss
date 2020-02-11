@@ -1,0 +1,25 @@
+
+:root {
+  --scrollbarBG:            #4d5761;
+  --thumbBG:                #434c55;
+  --swiper-theme-color:     #fff;
+  --swiper-navigation-size:   44px;
+}
+
+// @import 'helpers/reset';
+@import 'helpers/variables';
+
+
+///////////////////////////////////////////////////
+//BOOTSTRAP FILES
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+///////////////////////////////////////////////////
+// @import 'helpers/aos';
+
+///////////////////////////////////////////////////
+// $nameSpace: 'hr';
+// $primaryColor: $red;
+// $activeColor: #ffff00;
+// @import 'helpers/hover';

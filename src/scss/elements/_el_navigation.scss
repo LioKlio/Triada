@@ -1,0 +1,102 @@
+.navbar { flex-wrap: nowrap; padding: 0; }
+
+nav {
+
+  &.navbar-collapse {
+    display: flex; justify-content: flex-end;
+
+    @media (max-width: 1020px) {display: none;}
+
+    .navbar-nav {
+      flex-direction: row; justify-content: flex-end;
+      margin: 0 4%; width: 80%;
+    }
+  }
+  .nav-item {
+    margin: 0 2%;
+  }
+  .nav-link {
+    color: $text-color;
+    // font-size: 14px;
+
+    &-toggle::after {
+      content: "\f107";
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-size: 65%;
+      font-weight: 900;
+      margin-left: .5rem;
+      transition: 0.3s ease;
+    }
+  }
+
+  .navbar-collapse {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #333;
+    z-index: 0;
+    .navbar-nav {
+      flex-direction: column; justify-content: center; align-items: center;
+    }
+  }
+}
+
+
+a.target-burger {
+  display: none;
+  margin-left: 1.875rem;
+  width: 61px;
+  height: 30px;
+  position: relative;
+  // position: absolute;
+  // display: block;
+  transition: .5s;
+
+  @media (max-width: 1020px) {display: block;}
+
+  &:hover {
+    cursor: pointer;
+    opacity: .45;
+  }
+
+  &.toggled{
+    ul.buns{
+      li.bun{
+        background-color: $red;
+        transform: rotate(45deg) translateZ(0);
+        &:last-child{
+          transform: rotate(-45deg) translateZ(0);
+        }
+      }
+    }
+  }
+
+  ul.buns{
+      width: 31px;
+      height: 31px;
+      list-style: none;
+      margin-bottom: 0;
+      // margin: -1.625em/2 0 0 -1.625em/2;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transition: transform 1s cubic-bezier(.23,1,.32,1),color 1s cubic-bezier(.23,1,.32,1);
+      transform: translateZ(0);
+      color: #fff;
+      li.bun{
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          // position: absolute;
+          // top: 50%;
+          margin-top: -.75px;
+          transform: translateY(-3.75px) translateZ(0);
+          transition: transform 1s cubic-bezier(.23,1,.32,1),background-color 1s cubic-bezier(.23,1,.32,1);
+          &:last-child{
+              transform: translateY(3.75px) translateZ(0);
+          }
+      }
+  }
+}
+

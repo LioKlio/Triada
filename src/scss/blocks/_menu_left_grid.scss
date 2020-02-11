@@ -1,0 +1,23 @@
+.nav__grid-container {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "nav-alt1" "nav-main" "nav-alt2";
+  grid-row-gap: 20px;
+}
+
+.nav__main {
+  grid-area: nav-main;
+}
+
+.nav__alt.nav__alt1 {
+  grid-area: nav-alt1;
+}
+
+.nav__alt.nav__alt2 {
+  grid-area: nav-alt2;
+}

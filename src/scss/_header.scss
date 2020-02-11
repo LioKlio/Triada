@@ -1,0 +1,25 @@
+// HEADER
+.header {
+  padding: 20px 0; width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+  z-index: 200;
+}
+
+.index .header {
+  position: absolute; top: 0;left: 0;
+  width: 100%;
+  a {color: #fff;}
+  .call {
+    color: #fff;
+    .btn {color:#fff; border-color: #fff;}}
+}
+
+
+
+
+@media (max-width: 500px){
+  .header {
+    padding: 8px 0;
+    .logo img {height: 40px;}
+  }
+}

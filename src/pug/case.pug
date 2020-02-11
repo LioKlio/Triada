@@ -1,0 +1,146 @@
+extends layout/main.pug
+
+block vars
+  - const title = 'Портфолио - Rentavik';
+  - const pagetype = 'portfolio blue';
+
+block content
+
+  section.bg-light
+    .container
+      .row
+        .col.text-center
+          h1 Корпоративный сайт агентства «Рентавик»
+          .lead: strong Современный портал для торговли недвижимостью
+    .container
+      .full-w
+        img(src="./img/portfolio/rentavik/img1.png" alt="")
+
+
+
+  section
+    .container
+      .row
+        .col.text-center
+          .h1 Многофункциональный и интуитивно-понятный фильтр для клиентов
+          p Глубокая система настроек фильтра позволяет сотрудникам быстро и точно подобрать подходящее клиенту помещение
+    .bg-light
+      .container
+        .full-w
+          img(src="./img/portfolio/rentavik/img2.png" alt="")
+
+  section.left-side: .container-fluid
+    .row
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.text-center.py-5
+            include svg/map.pug
+            .h1 Присутствует режим отображения на <span>карте</span> всех объектов из базы данных
+
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img3.png" alt="")
+
+  section
+    .container
+      .row
+        .col.text-center
+          .h1: span Удобство
+          p.text-center Функционал позволяет определить и точное местоположение отдельного объекта
+    .bg-light
+      .container
+        .full-w
+          img(src="./img/portfolio/rentavik/img4.png" alt="")
+
+  section.right-side: .container-fluid
+    .row
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img5.png" alt="")
+
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row
+          .col-12.col-lg-9.py-5
+            .h1 <span>Карта метрополитена</span>
+            p Функция поиска объектов по карте метрополитена дает возможность выбирать линии метро или отдельные станции внутри кольцевых
+
+  section.left-side: .container-fluid
+    .row
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.py-5
+            .h1: span Быстрый поиск
+            p Классическая система быстрого поиска позволяет найти бизнес-центр или его адрес по названию.
+            p Просто введите начало адреса и поисковик предложит список подходящих вариантов
+
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img6.png" alt="")
+
+  section
+    .container
+      .row
+        .col.text-center
+          .h1: span СПИСОК НАЙДЕНЫЙ ОБЪЕКТОВ
+          p.text-center Список найденных объектов дополнен необходимой информацией о помещениях и приятно визуально оформлен
+
+    .full-w
+      img(src="./img/portfolio/rentavik/img7.png" alt="")
+
+  section.left-side: .container-fluid
+    .row
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.py-5
+            .h1: span Презентации
+            p Автоматическая генерация выбранных презентаций в формат PDF в фирменном стиле компании «Рентавик»
+
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img9.png" alt="")
+
+  section
+    .container
+      .row
+        .col.text-center
+          .h1: span Карточка объекта
+          p.text-center Карточка объекта содержит для клиента детальную информацию об особенностях здания и свободной площади
+    .bg-light
+      .container
+        .full-w
+          img(src="./img/portfolio/rentavik/img10.png" alt="")
+
+  section.right-side: .container-fluid
+    .row
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img11.png" alt="")
+
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row
+          .col-12.col-lg-9.py-5
+            .h1 <span>Редактирование</span>
+            p Сотрудники компании имеют возможность быстрого доступа к редактированию информации содержащейся в карточках, без необходимости использования сложных панелей управления порталом
+
+  section.left-side: .container-fluid
+    .row
+      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.py-5
+            .h1: span Подсказки
+            p Автоматические подсказки при вводе адреса помогают посетителям сайта обнаружить искомый объект
+
+      .col-12.col-md-7.px-0
+        .full-h
+          img(src="./img/portfolio/rentavik/img12.png" alt="")
+
+  section
+    .container
+      .row
+        .col.text-center
+          .h1: span Управление рекламой
+          p.text-center Созданные объекты автоматически экспортируются в выгрузки наиболее популярных российских сайтов по продаже недвижимости. Дополнительные настройки позволяют управлять платными опциями, а также доступом к объектам для сотрудников
+    .bg-light
+      .container
+        .full-w
+          img(src="./img/portfolio/rentavik/img13.png" alt="")

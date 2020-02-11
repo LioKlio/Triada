@@ -1,0 +1,30 @@
+.inp-group {
+  position: relative;
+  display: flex;
+  label {
+    color: $rose;
+    font-size: 18px;
+    font-family: $arapey;
+    font-style: italic;
+    text-align: right;
+  }
+
+  input {
+    font-size: 18px;
+    font-family: $arapey;
+    font-style: italic;
+    border: none;
+    background-color: transparent;
+  }
+  img {
+    position: absolute;
+    right: 6px;
+    bottom: 16px;
+  }
+}
+
+.form-control {
+  padding: 10px 10px 10px 20px;
+}
+
+@import '_custom_select';

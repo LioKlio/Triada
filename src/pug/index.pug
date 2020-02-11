@@ -1,0 +1,172 @@
+extends layout/main.pug
+
+block vars
+  - const title = 'Главная';
+  - const pagetype = 'index';
+
+block content
+
+  section.top
+    .container
+      .top-box.d-flex.flex-column.justify-content-center
+
+        .d-flex.justify-content-center.align-items-end.pb-4
+          h1.text-center.text-white
+            | МЫ ДЕЛАЕМ ЭФФЕКТИВНЫЕ <br>ПРОДАЮЩИЕ
+            u САЙТЫ,
+            u ИНТЕРНЕТ-МАГАЗИНЫ
+            |  И
+            u <br>ЛИЧНЫЕ КАБИНЕТЫ
+            |  ДЛЯ БИЗНЕСА С
+            span.text-primary  2003 ГОДА
+
+        .py-4.text-center
+          +form_inline('lg',0)
+
+  section.statistics
+    .container
+      ul.row.mb-0
+        li.col-12.col-sm-6.col-md.p-3
+          .num.text-center.text-primary 100+
+          p.text-center в штате компании более 100 сотрудников
+        li.col-12.col-sm-6.col-md.p-3
+          .num.text-center.text-primary 100+
+          p.text-center сайтов в успешном продвижении на постоянной основе
+        li.col-12.col-sm-6.col-md.p-3
+          .num.text-center.text-primary 100+
+          p.text-center сайтов на постоянной технической поддержке
+        li.col-12.col-sm-6.col-md.p-3
+          .num.text-center.text-primary 100+
+          p.text-center компания существует с 2003 года
+
+  section.pricies: .container
+    .row
+      each val in [1, 2, 3]
+        .col-12.col-xl-4.px-5.pb-5.pb-xl-0
+          .h1.mb-0 Создание сайтов
+          .tags
+            button.btn.btn-sm.btn-outline-info.tag битрикс
+            button.btn.btn-sm.btn-outline-info.tag mobile-friendly
+            button.btn.btn-sm.btn-outline-info.tag изначальное SEO
+            button.btn.btn-sm.btn-outline-info.tag заточены под бизнес
+          p Создание сайтов, Интернет-магазинов, личных и партнерских кабинетов для бизнеса любого уровня. Проекты любой сложности, интеграции с любыми сервисам
+          .row.pt-3
+            .col
+              .btn.btn-block.btn-primary Подробнее
+            .price.col-6.col-lg-8.col-xl-5 <span>от</span> 110 000 ₽
+
+  section.rise.bg-light: .container-fluid
+    .h1.section-title.text-center Мы делаем высокоэффективные сайты,<br>которые продают больше
+    p.lead.text-center Как мы этого достигаем?
+
+    .row.rise-chart
+      .col.rise-point
+        .btn.btn-primary 1%
+        .rise-point_title Обычный сайт
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 1,15%
+        .rise-point_title Технология ускорения сайта
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 1,72%
+        .rise-point_title Обычный сайт
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 2,15%
+        .rise-point_title Технология ускорения сайта
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 1%
+        .rise-point_title Обычный сайт
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 1,15%
+        .rise-point_title Технология ускорения сайта
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 1,72%
+        .rise-point_title Обычный сайт
+        p Каждый 100-ый оставляет заявку
+      .col.rise-point
+        .btn.btn-primary 2,15%
+        .rise-point_title Технология ускорения сайта
+        p Каждый 100-ый оставляет заявку
+
+  section.jumbotron.text-white: .container
+    .row.py-5
+      .col.text-center
+        .h1.text-white Вы получаете в 15 раз больше заявок!
+        .lead: strong На этом работа не заканчивается!
+
+        .py-5
+          .lead.text-center Автоматический сбор контактов. <strong>+500%</strong> лидов. Более холодных, но контактов потенциальных клиентов.
+          .lead.text-center Внедряем сквозную BI-аналитику. Отключаем до <strong>80%</strong> неэффективного бюджета.
+
+        +form_inline('lg',0)
+
+  section.projects: .container
+    .h1.section-title.text-center Наши проекты
+    .grid-container
+      .projects-block.b1
+        .row
+          .col-6
+            img.img-fluid(src="./img/top.jpg", alt="")
+          .col-6
+            .h3 Project
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+      .projects-block.b2
+        .row
+          .col-6
+            .h3 Project
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+      .projects-block.b3
+        .row
+          .col-6
+            img.img-fluid(src="./img/top.jpg", alt="")
+          .col-6
+            .h3 Project
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+      .projects-block.b4
+        .row
+          .col-4
+            .h3 Project
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+
+  section.work: .container
+    .h1.section-title.text-center Наши кейсы
+
+    each val in [1,2,3]
+      .case.mb-5: .row
+        .col-12.col-md-6.mb-5
+          h2.mb-2 Проектирование и концепты веб-сайта для SBI Bank
+          p.lead Проектирование и концепты веб-сайта для SBI Bank
+        .col-12.col-md-4.offset-md-2
+          .tags
+            button.btn.btn-sm.btn-outline-info.tag битрикс
+            button.btn.btn-sm.btn-outline-info.tag mobile-friendly
+            button.btn.btn-sm.btn-outline-info.tag изначальное SEO
+            button.btn.btn-sm.btn-outline-info.tag заточены под бизнес
+        .col
+          button.btn.btn-lg.btn-primary Подробнее о кейсе
+
+  section.left-side.contacts: .container-fluid
+    .h1.section-title.text-center КОНТАКТЫ
+
+    .row
+      .contact.col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.text-center.py-5
+            include svg/map.pug
+            .h1 Как нас найти?
+            p: strong Адрес
+            p г. Москва, ул. Льва Толстого, 5с1
+            p: strong Телефон
+            p + 7 (495) 240-82-92
+            p: strong E-mail
+            p: a(href="mailto:info@triadasite.ru") info@triadasite.ru
+
+
+      .map.col-12.col-md-7.px-0
+        script(type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4876ad7abb446173a1d8c3e404a00862771e35d67d92ad594d98091047131cd9&amp;width=764&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
