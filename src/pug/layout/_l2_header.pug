@@ -2,7 +2,7 @@ header.header: .container
   .navbar
     include ../elements/_el_logo.pug
 
-    nav.navbar-collapse.burger-el
+    nav.navbar-collapse.burger-el(data-aos="fade-down" data-aos-delay="1400" data-aos-duration="1000")
       ul.navbar-nav
         li.nav-item
           a.nav-link(href="text.html") Текстовка
@@ -10,7 +10,7 @@ header.header: .container
           a.nav-link(href="case.html") Портфолио
         +onelevel_menu_b4(['Продвижение', 'Поддержка', 'Услуги', 'Контакты'])
 
-    .call
+    .call(data-aos="fade-down" data-aos-delay="1800" data-aos-duration="1400")
       .phone +7 <span>(495)</span> 240-82-92
       button.btn.btn-sm.btn-outline-dark.btn-header Заказать звонок
 

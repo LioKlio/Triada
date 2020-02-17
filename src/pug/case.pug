@@ -6,24 +6,27 @@ block vars
 
 block content
 
-  section.bg-light
+  section.jumbotron.blue.triangles.colorize-bg
+
+    figure.triangle_l
+      include svg/triangle.pug
+    figure.triangle_r
+      include svg/triangle.pug
+
     .container
       .row
-        .col.text-center
+        .col.text-center.mb-5
           h1 Корпоративный сайт агентства «Рентавик»
           .lead: strong Современный портал для торговли недвижимостью
-    .container
-      .full-w
+      .full-w.bordered
         img(src="./img/portfolio/rentavik/img1.png" alt="")
-
-
 
   section
     .container
       .row
-        .col.text-center
-          .h1 Многофункциональный и интуитивно-понятный фильтр для клиентов
-          p Глубокая система настроек фильтра позволяет сотрудникам быстро и точно подобрать подходящее клиенту помещение
+        .col.text-center.mb-5
+          .h1 Многофункциональный и интуитивно-понятный<br><span class="colorize-text">фильтр</span> для клиентов
+          .lead Глубокая система настроек фильтра позволяет сотрудникам быстро и точно подобрать подходящее клиенту помещение
     .bg-light
       .container
         .full-w
@@ -31,22 +34,22 @@ block content
 
   section.left-side: .container-fluid
     .row
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row.justify-content-end
           .col-12.col-lg-9.text-center.py-5
             include svg/map.pug
-            .h1 Присутствует режим отображения на <span>карте</span> всех объектов из базы данных
+            .h1 Все объекты из базы данных на <span class="colorize-text">карте</span>
 
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img3.png" alt="")
 
   section
     .container
       .row
-        .col.text-center
-          .h1: span Удобство
-          p.text-center Функционал позволяет определить и точное местоположение отдельного объекта
+        .col.text-center.mb-5
+          .h1.colorize-text.colorize-text Удобство
+          .lead Функционал позволяет определить и точное местоположение отдельного объекта
     .bg-light
       .container
         .full-w
@@ -54,57 +57,56 @@ block content
 
   section.right-side: .container-fluid
     .row
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img5.png" alt="")
 
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row
           .col-12.col-lg-9.py-5
-            .h1 <span>Карта метрополитена</span>
+            .h1.colorize-text Карта метрополитена
             p Функция поиска объектов по карте метрополитена дает возможность выбирать линии метро или отдельные станции внутри кольцевых
 
   section.left-side: .container-fluid
     .row
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row.justify-content-end
           .col-12.col-lg-9.py-5
-            .h1: span Быстрый поиск
+            .h1.colorize-text Быстрый поиск
             p Классическая система быстрого поиска позволяет найти бизнес-центр или его адрес по названию.
             p Просто введите начало адреса и поисковик предложит список подходящих вариантов
 
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img6.png" alt="")
 
   section
     .container
       .row
-        .col.text-center
-          .h1: span СПИСОК НАЙДЕНЫЙ ОБЪЕКТОВ
-          p.text-center Список найденных объектов дополнен необходимой информацией о помещениях и приятно визуально оформлен
-
+        .col.text-center.mb-5
+          .h1.colorize-text СПИСОК НАЙДЕНЫЙ ОБЪЕКТОВ
+          .lead Список найденных объектов дополнен необходимой информацией о помещениях и приятно визуально оформлен
     .full-w
       img(src="./img/portfolio/rentavik/img7.png" alt="")
 
   section.left-side: .container-fluid
     .row
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row.justify-content-end
           .col-12.col-lg-9.py-5
-            .h1: span Презентации
+            .h1.colorize-text Презентации
             p Автоматическая генерация выбранных презентаций в формат PDF в фирменном стиле компании «Рентавик»
 
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img9.png" alt="")
 
   section
     .container
       .row
-        .col.text-center
-          .h1: span Карточка объекта
-          p.text-center Карточка объекта содержит для клиента детальную информацию об особенностях здания и свободной площади
+        .col.text-center.mb-5
+          .h1.colorize-text Карточка объекта
+          .lead Карточка объекта содержит для клиента детальную информацию об особенностях здания и свободной площади
     .bg-light
       .container
         .full-w
@@ -112,34 +114,34 @@ block content
 
   section.right-side: .container-fluid
     .row
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img11.png" alt="")
 
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row
           .col-12.col-lg-9.py-5
-            .h1 <span>Редактирование</span>
+            .h1.colorize-text Редактирование
             p Сотрудники компании имеют возможность быстрого доступа к редактированию информации содержащейся в карточках, без необходимости использования сложных панелей управления порталом
 
   section.left-side: .container-fluid
     .row
-      .col-12.col-md-5.d-flex.flex-column.justify-content-center
+      .col-12.col-lg-5.d-flex.flex-column.justify-content-center.bg-light
         .row.justify-content-end
           .col-12.col-lg-9.py-5
-            .h1: span Подсказки
+            .h1.colorize-text Подсказки
             p Автоматические подсказки при вводе адреса помогают посетителям сайта обнаружить искомый объект
 
-      .col-12.col-md-7.px-0
+      .col-12.col-lg-7.px-0
         .full-h
           img(src="./img/portfolio/rentavik/img12.png" alt="")
 
   section
     .container
       .row
-        .col.text-center
-          .h1: span Управление рекламой
-          p.text-center Созданные объекты автоматически экспортируются в выгрузки наиболее популярных российских сайтов по продаже недвижимости. Дополнительные настройки позволяют управлять платными опциями, а также доступом к объектам для сотрудников
+        .col.text-center.mb-5
+          .h1.colorize-text Управление рекламой
+          .lead Созданные объекты автоматически экспортируются в выгрузки наиболее популярных российских сайтов по продаже недвижимости. Дополнительные настройки позволяют управлять платными опциями, а также доступом к объектам для сотрудников
     .bg-light
       .container
         .full-w

@@ -10,7 +10,7 @@ export const paths = {
     dist: "./docs/css/"
   },
   scripts: {
-    src: "./src/js/main.js",
+    src: "./src/js/!(_)*.js",
     watch: "./src/js/**/*.js",
     dist: "./docs/js/",
   },

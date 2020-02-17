@@ -11,7 +11,7 @@ block content
       .top-box.d-flex.flex-column.justify-content-center
 
         .d-flex.justify-content-center.align-items-end.pb-4
-          h1.text-center.text-white
+          h1.text-center.text-white(data-aos="zoom-in-down" data-aos-delay="100" data-aos-duration="1000")
             | МЫ ДЕЛАЕМ ЭФФЕКТИВНЫЕ <br>ПРОДАЮЩИЕ
             u САЙТЫ,
             u ИНТЕРНЕТ-МАГАЗИНЫ
@@ -20,22 +20,22 @@ block content
             |  ДЛЯ БИЗНЕСА С
             span.text-primary  2003 ГОДА
 
-        .py-4.text-center
+        .py-4.text-center(data-aos="fade-up" data-aos-delay="300" data-aos-duration="800")
           +form_inline('lg',0)
 
   section.statistics
     .container
       ul.row.mb-0
-        li.col-12.col-sm-6.col-md.p-3
+        li.col-6.col-md.p-3(data-aos="fade-up" data-aos-delay="2200" data-aos-duration="800")
           .num.text-center.text-primary 100+
           p.text-center в штате компании более 100 сотрудников
-        li.col-12.col-sm-6.col-md.p-3
+        li.col-6.col-md.p-3(data-aos="fade-up" data-aos-delay="2300" data-aos-duration="800")
           .num.text-center.text-primary 100+
           p.text-center сайтов в успешном продвижении на постоянной основе
-        li.col-12.col-sm-6.col-md.p-3
+        li.col-6.col-md.p-3(data-aos="fade-up" data-aos-delay="2400" data-aos-duration="800")
           .num.text-center.text-primary 100+
           p.text-center сайтов на постоянной технической поддержке
-        li.col-12.col-sm-6.col-md.p-3
+        li.col-6.col-md.p-3(data-aos="fade-up" data-aos-delay="2500" data-aos-duration="800")
           .num.text-center.text-primary 100+
           p.text-center компания существует с 2003 года
 
@@ -44,11 +44,11 @@ block content
       each val in [1, 2, 3]
         .col-12.col-xl-4.px-5.pb-5.pb-xl-0
           .h1.mb-0 Создание сайтов
-          .tags
-            button.btn.btn-sm.btn-outline-info.tag битрикс
-            button.btn.btn-sm.btn-outline-info.tag mobile-friendly
-            button.btn.btn-sm.btn-outline-info.tag изначальное SEO
-            button.btn.btn-sm.btn-outline-info.tag заточены под бизнес
+          .tags.aos-group
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-down" data-aos-duration="800") битрикс
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-down" data-aos-duration="800") mobile-friendly
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-down" data-aos-duration="800") изначальное SEO
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-down" data-aos-duration="800") заточены под бизнес
           p Создание сайтов, Интернет-магазинов, личных и партнерских кабинетов для бизнеса любого уровня. Проекты любой сложности, интеграции с любыми сервисам
           .row.pt-3
             .col
@@ -56,8 +56,10 @@ block content
             .price.col-6.col-lg-8.col-xl-5 <span>от</span> 110 000 ₽
 
   section.rise.bg-light: .container-fluid
-    .h1.section-title.text-center Мы делаем высокоэффективные сайты,<br>которые продают больше
+    .h1.section-title.text-center Мы делаем<br>высокоэффективные сайты,<br>которые продают больше
     p.lead.text-center Как мы этого достигаем?
+
+    //- include elements/_grath.pug
 
     .row.rise-chart
       .col.rise-point
@@ -93,17 +95,23 @@ block content
         .rise-point_title Технология ускорения сайта
         p Каждый 100-ый оставляет заявку
 
-  section.jumbotron.text-white: .container
-    .row.py-5
-      .col.text-center
-        .h1.text-white Вы получаете в 15 раз больше заявок!
-        .lead: strong На этом работа не заканчивается!
+  section.jumbotron.red.triangles.text-white
+    figure.triangle_l
+      include svg/triangle.pug
+    figure.triangle_r
+      include svg/triangle.pug
+    canvas#nodes
+    .container
+      .row.py-5
+        .col.text-center
+          .h1.text-white Вы получаете в 15 раз больше заявок!
+          .lead: strong На этом работа не заканчивается!
 
-        .py-5
-          .lead.text-center Автоматический сбор контактов. <strong>+500%</strong> лидов. Более холодных, но контактов потенциальных клиентов.
-          .lead.text-center Внедряем сквозную BI-аналитику. Отключаем до <strong>80%</strong> неэффективного бюджета.
+          .py-5
+            .lead.text-center Автоматический сбор контактов. <strong>+500%</strong> лидов. Более холодных, но контактов потенциальных клиентов.
+            .lead.text-center Внедряем сквозную BI-аналитику. Отключаем до <strong>80%</strong> неэффективного бюджета.
 
-        +form_inline('lg',0)
+          +form_inline('lg',0)
 
   section.projects: .container
     .h1.section-title.text-center Наши проекты
@@ -111,43 +119,46 @@ block content
       .projects-block.b1
         .row
           .col-6
-            img.img-fluid(src="./img/top.jpg", alt="")
-          .col-6
             .h3 Project
-            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор. Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
       .projects-block.b2
+        figure(data-aos="fade-left" data-aos-delay="100" data-aos-duration="800")
+            img(src="../img/project-mobile.png", alt="")
         .row
           .col-6
             .h3 Project
             p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
       .projects-block.b3
         .row
-          .col-6
-            img.img-fluid(src="./img/top.jpg", alt="")
-          .col-6
+          .col-12
             .h3 Project
             p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+        figure(data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200")
+            img(src="../img/project-lap.png", alt="")
+
       .projects-block.b4
+        figure(data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000")
+            img(src="../img/project-monitor.png", alt="")
         .row
-          .col-4
+          .col-7
             .h3 Project
-            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
+            p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор. Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
 
   section.work: .container
     .h1.section-title.text-center Наши кейсы
 
     each val in [1,2,3]
-      .case.mb-5: .row
+      .case.mb-5: .row.aos-group
         .col-12.col-md-6.mb-5
           h2.mb-2 Проектирование и концепты веб-сайта для SBI Bank
           p.lead Проектирование и концепты веб-сайта для SBI Bank
         .col-12.col-md-4.offset-md-2
           .tags
-            button.btn.btn-sm.btn-outline-info.tag битрикс
-            button.btn.btn-sm.btn-outline-info.tag mobile-friendly
-            button.btn.btn-sm.btn-outline-info.tag изначальное SEO
-            button.btn.btn-sm.btn-outline-info.tag заточены под бизнес
-        .col
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-left" data-aos-duration="800") битрикс
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-left" data-aos-duration="800") mobile-friendly
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-left" data-aos-duration="800") изначальное SEO
+            button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-left" data-aos-duration="800") заточены под бизнес
+        .col(data-aos="fade-up" data-aos-duration="1200")
           button.btn.btn-lg.btn-primary Подробнее о кейсе
 
   section.left-side.contacts: .container-fluid
