@@ -39,10 +39,10 @@ block content
           .num.text-center.text-primary 100+
           p.text-center компания существует с 2003 года
 
-  section.pricies: .container
+  section.pricies: .container-fluid
     .row
       each val in [1, 2, 3]
-        .col-12.col-xl-4.px-5.pb-5.pb-xl-0
+        .price-block.col-12.col-lg-4.px-5.pb-5.pb-lg-0
           .h1.mb-0 Создание сайтов
           .tags.aos-group
             button.btn.btn-sm.btn-outline-info.tag(data-aos="fade-down" data-aos-duration="800") битрикс
@@ -53,7 +53,7 @@ block content
           .row.pt-3
             .col
               .btn.btn-block.btn-primary Подробнее
-            .price.col-6.col-lg-8.col-xl-5 <span>от</span> 110 000 ₽
+            .price.col-6.col-xl-5 <span>от</span> 110 000 ₽
 
   section.rise.bg-light: .container-fluid
     .h1.section-title.text-center Мы делаем<br>высокоэффективные сайты,<br>которые продают больше
@@ -118,7 +118,7 @@ block content
     .grid-container
       .projects-block.b1
         .row
-          .col-6
+          .col-12
             .h3 Project
             p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор. Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
       .projects-block.b2
@@ -135,7 +135,6 @@ block content
             p Insаpp — это быстрый, удобный и бесплатный сервис, помогающий купить лучшую страховку на любой случай жизни. Мы подбираем самые актуальные предложения от страховых компаний и помогаем вам сделать правильный выбор.
         figure(data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200")
             img(src="../img/project-lap.png", alt="")
-
       .projects-block.b4
         figure(data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000")
             img(src="../img/project-monitor.png", alt="")
